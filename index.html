@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消息机器人展示</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- 顶部导航按钮 -->
+    <div class="absolute top-4 left-0 right-0 z-50 flex justify-center">
+        <div class="flex space-x-2">
+            <a href="#home" class="bg-white px-4 py-2 rounded-md shadow-md hover:bg-gray-100 transition-colors">首页</a>
+            <a href="#features" class="bg-white px-4 py-2 rounded-md shadow-md hover:bg-gray-100 transition-colors">功能</a>
+            <a href="#cases" class="bg-white px-4 py-2 rounded-md shadow-md hover:bg-gray-100 transition-colors">案例</a>
+            <a href="#contact" class="bg-white px-4 py-2 rounded-md shadow-md hover:bg-gray-100 transition-colors">联系我们</a>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto overflow-hidden bg-white shadow-xl rounded-lg my-8">
+        <!-- Hero Section -->
+        <section id="home" class="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-24 bg-blue-600">
+            <!-- 左侧标题和描述 -->
+            <div class="text-white mb-10 md:mb-0 md:w-1/2">
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-4">自动精准引流</h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8">7*24小时自动监听-自动私信-自动强拉机器人</h2>
+
+                <!-- 按钮 -->
+                <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                    <span class="block text-xs">立即体验</span>
+                    <span class="block text-xl font-bold">开始使用</span>
+                </a>
+            </div>
+
+            <!-- 右侧手机展示 -->
+            <div class="md:w-1/2 flex justify-center gap-8">
+                <!-- 第一个手机外壳 -->
+                <div class="phone-container phone-1">
+                    <!-- 手机顶部状态栏 -->
+                    <div class="phone-status-bar">
+                        <div class="status-time">16:30</div>
+                        <div class="status-icons">
+                            <span class="status-icon">●</span>
+                            <span class="status-icon">●</span>
+                            <span class="status-icon">●</span>
+                        </div>
+                    </div>
+
+                    <!-- 聊天头部 -->
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <div class="chat-title-text">成都同城自动私信自动强拉机器人</div>
+                            <div class="chat-members"><b>624</b> 位成员</div>
+                        </div>
+                        <div class="chat-menu">⋮</div>
+                    </div>
+
+                    <!-- 消息区域 -->
+                    <div class="messages-container" id="messages">
+                        <!-- 消息内容将通过JavaScript动态添加 -->
+                    </div>
+
+                    <!-- 底部输入区 -->
+                    <div class="chat-input">
+                        <div class="input-avatar">A</div>
+                        <div class="input-text">
+                            <span class="input-placeholder">发送消息</span>
+                        </div>
+                        <div class="input-actions">
+                            <span class="input-action">□</span>
+                            <span class="input-action">📎</span>
+                            <span class="input-action">📷</span>
+                        </div>
+                    </div>
+
+                    <!-- 手机刘海 -->
+                    <div class="phone-notch"></div>
+                    <!-- 手机底部横条 -->
+                    <div class="phone-home-indicator"></div>
+                </div>
+
+                <!-- 第二个手机外壳 -->
+                <div class="phone-container phone-2">
+                    <!-- 手机顶部状态栏 -->
+                    <div class="phone-status-bar">
+                        <div class="status-time">16:30</div>
+                        <div class="status-icons">
+                            <span class="status-icon">●</span>
+                            <span class="status-icon">●</span>
+                            <span class="status-icon">●</span>
+                        </div>
+                    </div>
+
+                    <!-- 聊天头部 -->
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <div class="chat-title-text">公群监听自动私信自动强拉机器人</div>
+                            <div class="chat-members"><b>842</b> 位成员</div>
+                        </div>
+                        <div class="chat-menu">⋮</div>
+                    </div>
+
+                    <!-- 消息区域 -->
+                    <div class="messages-container" id="messages2">
+                        <!-- 消息内容将通过JavaScript动态添加 -->
+                    </div>
+
+                    <!-- 底部输入区 -->
+                    <div class="chat-input">
+                        <div class="input-avatar">A</div>
+                        <div class="input-text">
+                            <span class="input-placeholder">发送消息</span>
+                        </div>
+                        <div class="input-actions">
+                            <span class="input-action">□</span>
+                            <span class="input-action">📎</span>
+                            <span class="input-action">📷</span>
+                        </div>
+                    </div>
+
+                    <!-- 手机刘海 -->
+                    <div class="phone-notch"></div>
+                    <!-- 手机底部横条 -->
+                    <div class="phone-home-indicator"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行业定制横幅 -->
+        <section class="bg-gradient-to-r from-blue-700 to-blue-500 py-10 px-4 md:px-16 lg:px-24 shadow-lg industry-banner">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="flex items-center mb-4">
+                            <span class="text-white text-3xl mr-2">🔍</span>
+                            <h3 class="text-white text-2xl font-bold">行业定制：专属于您的引流方案</h3>
+                        </div>
+                        <p class="text-white text-lg mb-4">我们不同于市面上的通用监听机器人，我们提供的是行业定制服务！</p>
+                        <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors">
+                            联系客服
+                        </a>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-white rounded-full p-1 mr-3 mt-1">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-blue-600">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-white"><strong>精准行业群监听：</strong>不仅监听普通搜索群，还能监听您所在行业的专属群组</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-white rounded-full p-1 mr-3 mt-1">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-blue-600">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-white"><strong>定制关键词体系：</strong>根据您的行业特点，定制专属关键词监听体系</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-white rounded-full p-1 mr-3 mt-1">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-blue-600">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-white"><strong>全方位覆盖：</strong>可监听搜索群、行业群、担保工群、私密群等多种渠道</p>
+                            </li>
+                        </ul>
+                        <p class="text-white text-sm mt-4 italic">如果需要其他地区，更多行业精准定制，请直接联系客服。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能特点标题 -->
+        <section id="features" class="bg-blue-600 text-center py-8 md:py-12">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">功能特点</h2>
+        </section>
+
+        <!-- 功能详情 -->
+        <section class="bg-white py-12 md:py-16 lg:py-24 px-4 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 自动监听 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="feature-icon bg-blue-100 p-4 rounded-full inline-flex mb-6">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 text-blue-600">
+                            <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">自动监听</h3>
+                    <p class="text-gray-700 mb-4"><strong>核心价值：</strong>7*24小时不间断监控目标群组的消息动态</p>
+                    <p class="text-gray-700 mb-4"><strong>功能描述：</strong>行业群、地区群、搜素群、各类公群都可以定制</p>
+                    <p class="text-gray-700 mb-4"><strong>优势亮点：</strong>按需定制找到最适合你的客户群体</p>
+                    <p class="text-gray-700 mb-4"><strong>应用场景：</strong>适用于各类群聊，能够自动筛选有效信息，实时精准获客</p>
+                    <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium mt-4 hover:bg-blue-700 transition-colors">
+                        了解更多
+                    </a>
+                </div>
+
+                <!-- 自动私信 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="feature-icon bg-blue-100 p-4 rounded-full inline-flex mb-6">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 text-blue-600">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">自动私信</h3>
+                    <p class="text-gray-700 mb-4"><strong>核心价值：</strong>智能识别后自动触发精准私信，提高转化率</p>
+                    <p class="text-gray-700 mb-4"><strong>功能描述：</strong>根据用户在群内的发言内容，自动发送个性化私信，建立一对一联系</p>
+                    <p class="text-gray-700 mb-4"><strong>优势亮点：</strong>响应速度快，内容可定制，避免打扰无意向用户</p>
+                    <p class="text-gray-700 mb-4"><strong>应用场景：</strong>适用于客户咨询、需求收集、初步沟通等场景</p>
+                    <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium mt-4 hover:bg-blue-700 transition-colors">
+                        了解更多
+                    </a>
+                </div>
+
+                <!-- 自动强拉 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="feature-icon bg-blue-100 p-4 rounded-full inline-flex mb-6">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 text-blue-600">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">自动强拉</h3>
+                    <p class="text-gray-700 mb-4"><strong>核心价值：</strong>高效扩大客户群体，实现精准引流</p>
+                    <p class="text-gray-700 mb-4"><strong>功能描述：</strong>基于用户画像和兴趣标签，将潜在客户自动拉入相关群组</p>
+                    <p class="text-gray-700 mb-4"><strong>优势亮点：</strong>批量操作，精准匹配，提高转化效率</p>
+                    <p class="text-gray-700 mb-4"><strong>应用场景：</strong>新群组建立、频道推广、社群运营等</p>
+                    <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium mt-4 hover:bg-blue-700 transition-colors">
+                        了解更多
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- 客户案例 -->
+        <section id="cases" class="bg-gray-100 py-12 md:py-16 lg:py-24 px-4 md:px-16 lg:px-24">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">客户案例</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 案例1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden case-card">
+                        <div class="bg-blue-600 text-white p-4">
+                            <h3 class="font-bold text-xl">地区服务</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-700 mb-4">各个地区服务行业、SPA会所、外围群精准引流，自动私信自动强拉、每日新增客户数从50人增长到200人。</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>使用时长: 3个月</span>
+                                <span class="mx-2">|</span>
+                                <span>投资回报率: 500%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden case-card">
+                        <div class="bg-blue-600 text-white p-4">
+                            <h3 class="font-bold text-xl">虚拟产品</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-700 mb-4">账号售卖虚拟产品老板通过我们的定制服务，实现了精准引流，转化率提升了250%，大幅降低了获客成本。</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>使用时长: 6个月</span>
+                                <span class="mx-2">|</span>
+                                <span>投资回报率: 400%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden case-card">
+                        <div class="bg-blue-600 text-white p-4">
+                            <h3 class="font-bold text-xl">公群老板</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-700 mb-4">公群截流大多是私密群，利用我们的机器人，实现了24小时自动获客，月均新增客户数提升了180%。</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>使用时长: 4个月</span>
+                                <span class="mx-2">|</span>
+                                <span>投资回报率: 350%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="bg-white py-12 md:py-16 lg:py-24 px-4 md:px-16 lg:px-24">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">常见问题</h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- 问题1 -->
+                    <div class="mb-6 border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold mb-2">机器人支持哪些平台？</h3>
+                        <p class="text-gray-700">我们的机器人支持主流社交平台和通讯工具，包括但不限于Telegram、微信、QQ等。可根据您的需求进行定制。</p>
+                    </div>
+
+                    <!-- 问题2 -->
+                    <div class="mb-6 border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold mb-2">如何定制适合我行业的关键词？</h3>
+                        <p class="text-gray-700">我们会根据您的行业特点和目标客户群体，与您一起制定专属的关键词监听体系。您也可以随时调整和优化关键词列表。</p>
+                    </div>
+
+                    <!-- 问题3 -->
+                    <div class="mb-6 border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold mb-2">使用机器人是否合规？</h3>
+                        <p class="text-gray-700">我们的机器人严格遵守各平台的使用规则和隐私政策，采用合规的方式进行监听和互动，确保您的业务安全稳定运行。</p>
+                    </div>
+
+                    <!-- 问题4 -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">如何开始使用？</h3>
+                        <p class="text-gray-700">只需联系我们的客服，我们会为您提供详细的使用指南和技术支持，帮助您快速上手并获得最佳效果。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section id="contact" class="bg-blue-600 py-12 md:py-16 lg:py-24 px-4 md:px-16 lg:px-24 text-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">准备好提升您的获客效率了吗？</h2>
+                <p class="text-xl mb-8">联系我们，获取专属于您行业的定制方案</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors">
+                        立即咨询
+                    </a>
+                    <a href="https://t.me/+RKM6Z2HWmCQ4MTFl" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors">
+                        查看价格
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="bg-gray-800 text-white py-8 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">自动精准引流</h3>
+                        <p class="text-gray-400">7*24小时自动监听-自动私信-自动强拉机器人</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a>
+                        <a href="#features" class="text-gray-400 hover:text-white transition-colors">功能</a>
+                        <a href="#cases" class="text-gray-400 hover:text-white transition-colors">案例</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系我们</a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-500 text-sm">
+                    © 2023 自动精准引流. 保留所有权利.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
